@@ -1236,7 +1236,7 @@
 <section style="padding: 60px 20px; max-width: 600px; margin: 0 auto; text-align: center; font-family: sans-serif;">
   <h2 style="color: #4a3a35; margin-bottom: 30px;">Une question ? Contactez-moi</h2>
   
-  <form name="contact" method="POST" action="/" data-netlify="true" style="text-align: left; background: #fdfdfd; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+  <form name="contact" method="POST" action="/?success=true" data-netlify="true" style="text-align: left; background: #fdfdfd; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
     <input type="hidden" name="form-name" value="contact" />
 
     <div style="margin-bottom: 20px;">
@@ -1260,6 +1260,11 @@
       </button>
     </div>
   </form>
+  <script>
+  if (window.location.search.includes("success=true")) {
+    alert("Merci ! Votre message a bien été envoyé. Je vous répondrai très vite.");
+  }
+</script>
 </section>
   <!-- FOOTER -->
   <footer>
